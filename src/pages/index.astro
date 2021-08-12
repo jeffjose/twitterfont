@@ -1,0 +1,79 @@
+---
+import FontDisplay from '../components/FontDisplay.svelte';
+
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Font Display</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/home.css">
+
+    <style>
+    .group {
+        display: grid;
+    }
+
+    .title {
+        color: #333;
+        font-size: 12pt;
+    }
+
+    .title > span {
+        margin-right: 15px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .title .green {
+        color: #00ff009c;
+        margin-right: 5px;
+    }
+    .title .red {
+        color: #ff00009c;
+        margin-right: 5px;
+    }
+
+    </style>
+</head>
+<body>
+    <main>
+    <div class="title">
+    <span>
+        <span class="green">■</span>
+        <a href="https://abs.twimg.com/fonts/chirp-regular-web.woff">Twitter Chirp Regular 50pt</a>
+    </span>
+    <span>
+        <span class="red">■</span>
+        <a href="https://www.grillitype.com/typeface/gt-america">GT America Regular 50pt</a>
+    </span>
+    </div>
+    <div class="group">
+        <FontDisplay text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"color="#00ff009c" name="chirp" src="fonts/chirp-regular-web.woff" client:visible />
+        <FontDisplay style="letter-spacing: 0.5px" text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"color="#ff00009c" name="gtamerica" src="fonts/GT-America-Standard-Regular-Trial.woff2" client:visible />
+    </div>
+
+    <div class="group">
+        <FontDisplay text="abcdefghijklmnopqrstuvwxyz"color="#00ff009c" name="chirp" src="fonts/chirp-regular-web.woff" client:visible />
+        <FontDisplay style="letter-spacing: 0.5px" text="abcdefghijklmnopqrstuvwxyz"color="#ff00009c" name="gtamerica" src="fonts/GT-America-Standard-Regular-Trial.woff2" client:visible />
+        </div>
+
+    <div class="group">
+        <FontDisplay text="1234567890-,."color="#00ff009c" name="chirp" src="fonts/chirp-regular-web.woff" client:visible />
+        <FontDisplay style="letter-spacing: -0.9px" text="1234567890-,."color="#ff00009c" name="gtamerica" src="fonts/GT-America-Standard-Regular-Trial.woff2" client:visible />
+    </div>
+
+    <div class="group">
+        <FontDisplay text="Twitter tweets retweet"color="#00ff009c" name="chirp" src="fonts/chirp-regular-web.woff" client:visible />
+        <FontDisplay style="letter-spacing: 0.5px" text="Twitter tweets retweet"color="#ff00009c" name="gtamerica" src="fonts/GT-America-Standard-Regular-Trial.woff2" client:visible />
+    </div>
+    </main>
+</body>
+</html>
